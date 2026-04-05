@@ -1,5 +1,6 @@
 const GOOGLE_CLIENT_ID = "158105303099-to3ns3804q4r87vfto3rjq6nsrnmv78b.apps.googleusercontent.com";
 const CACHE_KEY = "nh_google_photo";
+const DEFAULT_HERO_PHOTO = "assets/headshot-sf-match-2025.jpg";
 
 const profileCards = [
   {
@@ -976,7 +977,6 @@ const initGoogleAvatar = () => {
     avatarImg.src = url;
     avatarImg.style.display = "";
     avatarPlaceholder.style.display = "none";
-    avatarConnect.style.display = "none";
   };
 
   const decodeJwtPayload = (token) => {
@@ -993,17 +993,13 @@ const initGoogleAvatar = () => {
     }
   };
 
-  const cached = localStorage.getItem(CACHE_KEY);
-  if (cached) {
-    showPhoto(cached);
-  }
+  showPhoto(DEFAULT_HERO_PHOTO);
 
   window.addEventListener("load", () => {
     if (typeof google === "undefined" || !google.accounts) return;
     google.accounts.id.initialize({
       client_id: GOOGLE_CLIENT_ID,
-      callback: handleCredentialResponse,
-      auto_select: true
+      callback: handleCredentialResponse
     });
 
     avatarConnect.addEventListener("click", () => {
