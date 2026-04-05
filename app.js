@@ -28,8 +28,13 @@ const profileCards = [
     copy:
       "Alongside medicine and research, Nicholas builds AI-enabled apps and polished web experiences across health, research, finance, and clinical education. That includes designing custom portfolios for other people, including executive and research-focused sites.",
     links: [
+      { label: "Enhanced Health AI", href: "https://enhancedhealthai.com" },
+      { label: "NestWise HQ", href: "https://nestwisehq.com" },
+      { label: "Research Aria", href: "https://researcharia.com" },
       { label: "All Things AI", href: "https://all-things-ai.pages.dev" },
-      { label: "GitHub", href: "https://github.com/nhouseholder" }
+      { label: "BrewMap", href: "https://brewmap-app.pages.dev" },
+      { label: "Ophtho Cards", href: "https://ophtho-cards.pages.dev" },
+      { label: "Chief Resident AI", href: "https://residency-app.pages.dev" }
     ]
   }
 ];
