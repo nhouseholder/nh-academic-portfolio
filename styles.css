@@ -489,16 +489,22 @@ h1 {
   padding: 110px 0 0;
 }
 
+.chapter-dark,
+.builder-section {
+  padding-left: clamp(18px, 2.4vw, 28px);
+  padding-right: clamp(18px, 2.4vw, 28px);
+}
+
 .chapter-dark::before,
 .builder-section::before {
   content: "";
   position: absolute;
-  inset: 50px calc((100vw - var(--site-width)) / 2) -14px;
   border-radius: 42px;
   z-index: -1;
 }
 
 .chapter-dark::before {
+  inset: 50px calc((100vw - var(--site-width)) / 2) -14px;
   background:
     radial-gradient(circle at 14% 20%, rgba(35, 162, 181, 0.18), transparent 20%),
     radial-gradient(circle at 86% 14%, rgba(215, 107, 71, 0.12), transparent 22%),
@@ -507,6 +513,7 @@ h1 {
 }
 
 .builder-section::before {
+  inset: 50px 0 -14px;
   background:
     radial-gradient(circle at 18% 30%, rgba(35, 162, 181, 0.2), transparent 20%),
     radial-gradient(circle at 82% 18%, rgba(91, 102, 198, 0.2), transparent 20%),
