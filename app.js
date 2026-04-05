@@ -711,8 +711,8 @@ const archiveGroups = [
         title: "Academic metrics and certifications",
         copy: "High-performance testing and foundational certifications.",
         bullets: [
-          "USMLE Step 2: 268.",
-          "MCAT: 520.",
+          "USMLE Step 2 CK: 268 (about 90th percentile based on the 2024-2025 USMLE norm table).",
+          "MCAT: 520 (98th percentile in the 2019 percentile table).",
           "Neuroscience core GPA: 3.81.",
           "Dean’s List every undergraduate year at USC.",
           "NREMT certified (2020).",
