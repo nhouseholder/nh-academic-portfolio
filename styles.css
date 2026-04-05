@@ -481,6 +481,7 @@ h1 {
 .chapter-light,
 .chapter-tint,
 .chapter-archive,
+.chapter-dark,
 .builder-section {
   position: relative;
 }
@@ -504,7 +505,7 @@ h1 {
 }
 
 .chapter-dark::before {
-  inset: 50px calc((100vw - var(--site-width)) / 2) -14px;
+  inset: 50px 0 -14px;
   background:
     radial-gradient(circle at 14% 20%, rgba(35, 162, 181, 0.18), transparent 20%),
     radial-gradient(circle at 86% 14%, rgba(215, 107, 71, 0.12), transparent 22%),
