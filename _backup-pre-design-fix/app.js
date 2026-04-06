@@ -509,7 +509,7 @@ const studioProjects = [
     copy:
       "If you need a portfolio that feels sharper than a template, Nicholas can build one that combines biography, achievements, publications, links, projects, and a distinctive visual identity.",
     links: [
-      { label: "Fill out the form", href: "#contactForm" },
+      { label: "Email Nicholas", href: "mailto:Nicholas.Householder@ttuhsc.edu" },
       { label: "GitHub", href: "https://github.com/nhouseholder" }
     ]
   }
@@ -1021,36 +1021,4 @@ document.addEventListener("DOMContentLoaded", () => {
   renderArchive();
   initReveals();
   initGoogleAvatar();
-  initContactForm();
 });
-
-const initContactForm = () => {
-  const form = document.getElementById("contactForm");
-  const status = document.getElementById("formStatus");
-  if (!form || !status) return;
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    status.textContent = "";
-    status.className = "form-status";
-
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: { Accept: "application/json" }
-      });
-
-      if (response.ok) {
-        status.textContent = "Message sent — thank you! Nicholas will be in touch soon.";
-        status.className = "form-status is-success";
-        form.reset();
-      } else {
-        throw new Error("Server error");
-      }
-    } catch {
-      status.textContent = "Something went wrong. Please email Nicholas directly at Nicholas.Householder@ttuhsc.edu.";
-      status.className = "form-status is-error";
-    }
-  });
-};
