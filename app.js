@@ -1049,7 +1049,7 @@ const initContactForm = () => {
         throw new Error("Server error");
       }
     } catch {
-      status.textContent = "Something went wrong. Please email Nicholas directly at Nicholas.Householder@ttuhsc.edu.";
+      status.textContent = "Something went wrong. Please email Nicholas directly at nikhouseholdr@gmail.com.";
       status.className = "form-status is-error";
     }
   });
