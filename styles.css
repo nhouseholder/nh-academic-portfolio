@@ -768,8 +768,8 @@ h1 {
 .research-layout {
   margin-top: 24px;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 20px;
+  grid-template-columns: 1fr;
+  gap: 24px;
 }
 
 .research-layout > * {
@@ -855,7 +855,7 @@ h1 {
 
 .conference-grid {
   margin-top: 18px;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .conference-card .conference-meta {
@@ -1025,6 +1025,10 @@ h1 {
 
 .project-card p {
   color: rgba(237, 245, 255, 0.78);
+}
+
+.project-card h3 {
+  color: var(--text-inverse);
 }
 
 .project-tags {
@@ -1364,6 +1368,7 @@ h1 {
   .hero-stats,
   .profile-grid,
   .theme-grid,
+  .conference-grid,
   .publication-grid,
   .timeline-grid,
   .mini-card-grid,

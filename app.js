@@ -915,7 +915,7 @@ const renderArchive = () => {
   root.innerHTML = archiveGroups
     .map(
       (group, index) => `
-        <details class="archive-group" ${index === 0 ? "open" : ""}>
+        <details class="archive-group">
           <summary>
             <div class="archive-number">${String(index + 1).padStart(2, "0")}</div>
             <div>
